@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  pytorch:
+    build: pytorch
+    image: pytorch
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    shm_size: '8gb'
+    ports:
+      - 8888:8888
+    volumes:
+      # TODO: Voeg hier extra folders toe om ze zichtbaar te maken in je containers
+      - C:\Users\jens.baetens3\OneDrive - ODISEE\Lesmateriaal\MachineLearning:/workspace/docent
