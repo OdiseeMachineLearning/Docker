@@ -13,4 +13,6 @@
 
 **Bad interpreter in entrypoint of run.sh**
 
-* open de .sh file in visual studio code en wissel crlf naar lf -> rechtsonderaan. bewaar de file en probeer opnieuw.		
+* Open de run.sh file in de pytorch map in visual studio code
+* Wissel de line-ending van crlf naar lf door rechtsonderaan op crlf te klikken en daarna centraalbovenaan lf te kiezen.
+* Bewaar de file en rebuild de container (niet enkel up).		
