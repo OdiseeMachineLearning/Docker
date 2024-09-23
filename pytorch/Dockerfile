@@ -1,8 +1,28 @@
 FROM pytorch/pytorch:latest
 
 # install jupyter notebook
-RUN pip install jupyterlab pandas scikit-learn tensorflow matplotlib
+RUN pip install jupyterlab
 EXPOSE 8888
+
+RUN apt-get update && apt-get install -y \
+	graphviz
+
+#RUN echo 'PATH=$PATH:/opt/conda/lib/python3.10/site-packages' >> ~/.bashrc
+
+# install data science packages
+RUN pip install pandas scikit-learn opendatasets datasets seaborn
+# install ml packages
+RUN pip install tensorflow matplotlib pydot torchviz graphviz pydot torchsummary pycocotools flask
+
+# extra packages
+RUN pip install firebase_admin onnx onnxscript keras-preprocessing ufal.pybox2d gymnasium gymnasium[classic-control] gymnasium[other] gymnasium[box2d]
+
+
+# Tensorboard port
+EXPOSE 6006
+
+# Flask port
+EXPOSE 5000
 
 RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
