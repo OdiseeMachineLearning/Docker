@@ -11,20 +11,9 @@ Hoe starten
 		C:\Users\jens.baetens3\OneDrive - ODISEE\Lesmateriaal\BigData\Leerstof:/home/bigdata/workspace
 	Pas het volgende pad aan naar de folder waarin je wilt werken / waar je de oefeningen repositories gaat plaatsen
 		 C:\Users\jens.baetens3\ODISEE\DIGITAL - OPLINF\AJ23-24\OPO's\Bachelors\Big Data\Leerstof
-
 - Voer de volgende commando's uit:
-	docker-compose -f "{filename van het uit te voeren docker bestand}" build
-	docker-compose -f "{filename van het uit te voeren docker bestand}" up
-
-########
-Tegengekomen fouten
-########
-
-bad interpreter in entrypoint of run.sh		
-
-		open de .sh file in visual studio code en wissel crlf naar lf -> rechtsonderaan. bewaar de file en probeer opnieuw.
-		
-mapred-site.xml error bij mapreduce
-	
-		versienummer in hadoop.env is niet correct overgenomen
-		
+   ````
+	docker-compose build
+	docker-compose up
+   ````
+- Navigeer naar localhost:8888 in een browser en je zou een jupyterlab omgeving moeten hebben. In deze omgeving gaan we werken.		
