@@ -17,5 +17,4 @@ services:
       - 5000:5000
     volumes:
       # TODO: Voeg hier extra folders toe om ze zichtbaar te maken in je containers
-      - C:\Users\jens.baetens3\OneDrive - ODISEE\Lesmateriaal\MachineLearning:/workspace/docent
-      - /dev/video0:/dev/video0
+      - {Absoluut pad waar je alles zet van dit vak}:/workspace/student
