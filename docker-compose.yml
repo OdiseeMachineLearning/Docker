@@ -1,20 +1,11 @@
 services:
-  pytorch:
+  pytorchstudent:
     build: pytorch
     image: pytorch
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              capabilities: [gpu]  # Specify GPU capability
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=all
-    shm_size: '8gb'
     ports:
       - 8888:8888
       - 6006:6006
       - 5000:5000
     volumes:
       # TODO: Voeg hier extra folders toe om ze zichtbaar te maken in je containers
-      - {Absoluut pad waar je alles zet van dit vak}:/workspace/student
+      - C:\Users\jens.baetens3\OneDrive - ODISEE\Lesmateriaal\MachineLearning:/workspace/docent
