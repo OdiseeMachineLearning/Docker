@@ -15,7 +15,7 @@ RUN pip install pandas scikit-learn opendatasets datasets seaborn
 RUN pip install tensorflow matplotlib pydot torchviz graphviz pydot torchsummary pycocotools flask
 
 # extra packages
-RUN pip install firebase_admin onnx onnxscript keras-preprocessing ufal.pybox2d pygame gymnasium gymnasium[classic-control] gymnasium[other] 
+RUN pip install firebase_admin onnx onnxscript keras-preprocessing ufal.pybox2d gymnasium gymnasium[classic-control] gymnasium[other] 
 
 
 # Tensorboard port
